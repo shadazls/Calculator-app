@@ -1,0 +1,220 @@
+.theme1 {
+    --main-bg-color: hsl(222, 26%, 31%);
+    --keypad-toggle-bg-color: hsl(223, 31%, 20%);
+    --screen-bg-color: hsl(224, 36%, 15%);
+    --key-1-bg-color: hsl(30, 25%, 89%);
+    --key-1-shadow-color: hsl(28, 16%, 65%);
+    --key-1-hover-color: #ffffff;
+    --key-2-bg-color: hsl(225, 21%, 49%);
+    --key-2-shadow-color: hsl(224, 28%, 35%);
+    --key-2-hover-color: #a4b3dc;
+    --key-3-bg-toggle-color: hsl(6, 63%, 50%);
+    --key-3-shadow-toggle-color: hsl(6, 70%, 34%);
+    --key-3-hover-color: #f96c5b;
+    --text-1-color: hsl(221, 14%, 31%);
+    --text-2-color : hsl(0, 0%, 100%);
+    --text-3-color: hsl(0, 0%, 100%);
+    --text-4-color : hsl(0, 0%, 100%);
+}
+
+.theme2 {
+    --main-bg-color: hsl(0, 0%, 90%);
+    --keypad-toggle-bg-color: hsl(0, 5%, 81%);
+    --screen-bg-color: hsl(0, 0%, 93%);
+    --key-1-bg-color: hsl(45, 7%, 89%);
+    --key-1-shadow-color: hsl(35, 11%, 61%);
+    --key-1-hover-color: #ffffff;
+    --key-2-bg-color: hsl(185, 42%, 37%);
+    --key-2-shadow-color: hsl(185, 58%, 25%);
+    --key-2-hover-color: #62b5bd;
+    --key-3-bg-toggle-color: hsl(25, 98%, 40%);
+    --key-3-shadow-toggle-color: hsl(25, 99%, 27%);
+    --key-3-hover-color: #ff8b38;
+    --text-1-color: hsl(60, 10%, 19%);
+    --text-2-color : hsl(0, 0%, 100%);
+    --text-3-color: hsl(60, 10%, 19%);
+    --text-4-color : hsl(0, 0%, 100%);
+}
+
+.theme3 {
+    --main-bg-color: hsl(268, 75%, 9%);
+    --keypad-toggle-bg-color: hsl(268, 71%, 12%);
+    --screen-bg-color: hsl(268, 71%, 12%);
+    --key-1-bg-color: hsl(268, 47%, 21%);
+    --key-1-shadow-color: hsl(290, 70%, 36%);
+    --key-1-hover-color: #6b34ac;
+    --key-2-bg-color: hsl(281, 89%, 26%);
+    --key-2-shadow-color: hsl(285, 91%, 52%);
+    --key-2-hover-color: #8731af;
+    --key-3-bg-toggle-color: hsl(176, 100%, 44%);
+    --key-3-shadow-toggle-color: hsl(177, 92%, 70%);
+    --key-3-hover-color: #94fff9;
+    --text-1-color: hsl(52, 100%, 62%);
+    --text-2-color : hsl(0, 0%, 100%);
+    --text-3-color: hsl(52, 100%, 62%);
+    --text-4-color: hsl(198, 20%, 13%);
+}
+
+body{
+    background-color: var(--main-bg-color);
+    font-family: 'League Spartan', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}  
+
+@media screen and (max-width: 748px) {
+    #calculator {
+        width: 90vw; /* Réduisez la largeur du calculateur pour les petits écrans */
+        height: auto; /* Ajustez la hauteur automatiquement */
+    }
+
+    #calculator-buttons {
+        padding: 3%; /* Réduisez un peu l'espace entre les boutons */
+        grid-template-columns: repeat(3, 1fr); /* Passez à une disposition à 3 colonnes */
+    }
+
+    #calculator-screen {
+        font-size: 32px; /* Réduisez la taille de la police pour s'adapter aux petits écrans */
+    }
+
+    .button-1, .button-2, .button-3 {
+        font-size: 24px; /* Réduisez la taille de la police des boutons pour s'adapter aux petits écrans */
+    }
+}
+
+p {
+    margin: 0;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
+button:active {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+}
+
+#calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30vw;
+    height: 60vh;
+    gap: 15px;
+}
+  
+/* Styles pour le sélecteur de thème */
+#theme-chooser {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Ajoutez cette ligne pour que le div occupe toute la largeur */
+}
+
+.text-3 {
+    color: var(--text-3-color);
+    font-size: 32px;
+
+}
+
+#calculator-screen {
+    background-color: var(--screen-bg-color);
+    color: var(--text-3-color);
+    border-radius: 10px;
+    width: 95%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 5%;
+    font-size: 48px;
+}
+
+#calculator-buttons {
+    background-color: var(--keypad-toggle-bg-color);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 5%;
+    padding: 5%;
+    height: 100%;
+    width: 90%;
+    margin-top: 10px;
+}
+
+.button-1 {
+    background-color: var(--key-1-bg-color);
+    box-shadow: 0px 3px var(--key-1-shadow-color);
+    border-radius: 10px;
+    color: var(--text-1-color);
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-1:hover {
+    background-color: var(--key-1-hover-color);
+}
+
+.button-2 {
+    background-color: var(--key-2-bg-color);
+    box-shadow: 0px 3px var(--key-2-shadow-color);
+    border-radius: 10px;
+    color: var(--text-2-color);
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-2:hover {
+    background-color: var(--key-2-hover-color);
+}
+
+.button-3 {
+    background-color: var(--key-3-bg-toggle-color);
+    box-shadow: 0px 3px var(--key-3-shadow-toggle-color);
+    border-radius: 10px;
+    color: var(--text-4-color);
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.button-3:hover {
+    background-color: var(--key-3-hover-color);
+}
+
+.big-button {
+    grid-column: span 2;
+}
+
+.hvr-shrink {
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+.hvr-shrink:hover, .hvr-shrink:focus, .hvr-shrink:active {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+}

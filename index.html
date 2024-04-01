@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="calculator.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+
+  <title>Calculator app</title>
+</head>
+
+<body class="theme1">
+  <main>
+    <div id="calculator">
+      <div id="theme-chooser">
+          <p class="text-3">calc</p>
+          <div>
+            <button class="theme-button" data-theme="1">1</button>
+            <button class="theme-button" data-theme="2">2</button>
+            <button class="theme-button" data-theme="3">3</button>
+          </div>
+          
+      </div>
+    
+    
+      <div id="calculator-screen">
+        
+      </div>
+      <div id="calculator-buttons">
+        <button class="button-1" data-value="7">7</button>
+        <button class="button-1" data-value="8">8</button>
+        <button class="button-1" data-value="9">9</button>
+        <button class="button-2" data-action="clear">DEL</button>
+        <button class="button-1" data-value="4">4</button>
+        <button class="button-1" data-value="5">5</button>
+        <button class="button-1" data-value="6">6</button>
+        <button class="button-1" data-action="+">+</button>
+        <button class="button-1" data-value="1">1</button>
+        <button class="button-1" data-value="2">2</button>
+        <button class="button-1" data-value="3">3</button>
+        <button class="button-1" data-action="-">-</button>
+        <button class="button-1" data-value=".">.</button>
+        <button class="button-1" data-value="0">0</button>
+        <button class="button-1" data-action="/">/</button>
+        <button class="button-1" data-action="*">x</button>
+        <button class="big-button button-2" data-action="reset">RESET</button>
+        <button class="big-button button-3" data-action="calculate">=</button>
+      </div>
+    
+    </div>
+  </main>
+
+  <script src="calculator.js"></script>
+  <script src="theme.js"></script>
+</body>
+</html>
