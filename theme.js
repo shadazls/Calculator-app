@@ -17,5 +17,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function changeTheme(theme) {
         body.className = 'theme' + theme;
+
+        themeButtons.forEach(button => {
+            if (button.getAttribute('data-theme') !== theme) {
+                button.style.opacity = '0';
+                button.setAttribute('aria-hidden', 'true'); // Optionnel : indique que le bouton est caché pour les technologies d'assistance
+            } else {
+                button.style.opacity = '1';
+                button.setAttribute('aria-hidden', 'false'); // Optionnel : indique que le bouton n'est pas caché pour les technologies d'assistance
+            }
+        });
     }
 });

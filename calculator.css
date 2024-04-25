@@ -124,6 +124,41 @@ button:active {
     width: 100%; /* Ajoutez cette ligne pour que le div occupe toute la largeur */
 }
 
+.theme-toggle {
+    /* position: relative; */
+    border-radius: 30px;
+    background-color: var(--keypad-toggle-bg-color);
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    /* background-color: red; */
+}
+
+.theme-item {
+    position: relative; /* Ajout de position: relative */
+    display: flex;
+    justify-content: center;
+}
+
+.theme-button {
+    border-radius: 100%;
+    background-color: var(--key-3-hover-color);
+    height: 20px;
+    width: 20px;
+    position: relative;
+}
+
+.theme-button.hidden {
+    display: none;
+}
+
+.theme-label {
+    position: absolute;
+    top: -35px;
+    color: var(--text-3-color);
+}
+
 .text-3 {
     color: var(--text-3-color);
     font-size: 32px;
