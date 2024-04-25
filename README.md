@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/shadazls/Calculator-app)
-- Live Site URL: [Add live site URL here](https://shadazls.github.io/Calculator-app/)
+- Solution URL: [Github Repository](https://github.com/shadazls/Calculator-app)
+- Live Site URL: [Live Site](https://shadazls.github.io/Calculator-app/)
 
 ## My process
 
