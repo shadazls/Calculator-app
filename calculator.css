@@ -133,6 +133,7 @@ button:active {
     justify-content: space-between;
     padding: 2%;
     /* background-color: red; */
+    position: relative;
 }
 
 .theme-item {
@@ -157,6 +158,12 @@ button:active {
     position: absolute;
     top: -35px;
     color: var(--text-3-color);
+}
+
+.theme-text {
+    color: var(--text-3-color);
+    position: absolute;
+    left: -65px;
 }
 
 .text-3 {
