@@ -125,15 +125,13 @@ button:active {
 }
 
 .theme-toggle {
-    /* position: relative; */
+    position: relative;
     border-radius: 30px;
     background-color: var(--keypad-toggle-bg-color);
     width: 15%;
     display: flex;
     justify-content: space-between;
     padding: 2%;
-    /* background-color: red; */
-    position: relative;
 }
 
 .theme-item {
